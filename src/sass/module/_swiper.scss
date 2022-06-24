@@ -1,0 +1,72 @@
+@use "global" as *;
+
+//js-mv-swiper
+@keyframes zoomUp {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.15);
+    }
+}
+
+.swiper-slide-active .slide-img,
+.swiper-slide-duplicate-active .slide-img,
+.swiper-slide-prev .slide-img{
+    animation: zoomUp 10s linear 0s 1 normal both;
+}
+.slide-img img {
+    display: block;
+}
+
+
+// js-works-swiper
+.swiper-container {
+    position: relative;
+
+    @include mq(md) {
+        display: block;
+        max-width: rem(557);
+        width: 100%;
+    }
+}
+
+.swiper.js-works-swiper {
+    width: 100%;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.swiper-slide-active.js-works-slide,
+.swiper-slide-duplicate-active.js-works-slide,
+.swiper-slide-prev.js-works-slide{
+}
+
+.swiper-slide.js-works-slide img {
+    height: auto;
+    width: 100%;
+
+    @include mq (md)  {
+        max-width: rem(557) !important;
+    }
+}
+
+.swiper-pagination.js-works-pagination {
+        bottom: rem(-22) !important;
+
+    @include mq (md){
+        bottom: rem(48) !important;
+        left: rem(-21) !important;
+    }
+}
+
+.swiper-pagination-bullet {
+    background: var(--swiper-pagination-bullet-inactive-color, $light-gray) !important;
+    opacity: var(--swiper-pagination-bullet-inactive-opacity, 1) !important;
+    margin: 0 rem(6) !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--swiper-pagination-bullet-inactive-color, $light-yellow) !important;
+    opacity: var(--swiper-pagination-bullet-inactive-opacity, 1) !important;
+}

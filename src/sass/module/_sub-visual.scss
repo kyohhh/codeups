@@ -1,0 +1,33 @@
+@use "global" as *;
+
+.sub-visual {
+
+}
+
+.sub-visual__inner {
+    position: relative;
+}
+
+.sub-visual__content {
+}
+
+.sub-visual__text {
+    letter-spacing: rem(0.5);
+    font-weight: $bold;
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sub-visual__title {
+    font-size: rem(30);
+    line-height: rem(43.44);
+    font-weight: bold;
+
+    @include mq(md) {
+        font-size: rem(35);
+        line-height: rem(35);
+    }
+}

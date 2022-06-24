@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Input your ID and Password."
+AuthUserFile /home/ks19930322/kyohey-job.com/public_html/.htpasswd
+require valid-user

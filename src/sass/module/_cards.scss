@@ -1,0 +1,49 @@
+@use "global" as *;
+
+.cards {
+
+}
+
+.cards__items {
+
+}
+
+///////////
+//sp
+///////////
+.cards__item:nth-child(n + 2) {
+    margin-top: rem(24);
+
+    @include mq(md) {
+        margin-left: rem(19);
+    }
+}
+
+.cards__item:nth-child(2) {
+    @include mq(md) {
+        margin-top: 0;
+    }
+}
+
+.cards__item:nth-child(3) {
+    @include mq(md) {
+        margin-top: 0;
+    }
+}
+
+
+//////////
+//pc
+//////////
+
+.cards__item:nth-child(3n + 1) {
+    @include mq(md) {
+        margin-left: 0;
+    }
+}
+
+.cards__item:nth-child(n + 4) {
+    @include mq(md) {
+        margin-top: rem(48);
+    }
+}

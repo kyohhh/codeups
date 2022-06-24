@@ -1,0 +1,70 @@
+@use "global" as *;
+
+.blog {
+
+    @include mq(md) {
+
+    }
+}
+
+.inner {
+    @include mq("md") {
+    }
+}
+
+.blog__inner {
+    margin: 0 auto;
+    max-width: rem(375);
+    width: 100%;
+    padding-right: $padding-sp;
+    padding-left: $padding-sp;
+    margin-right: auto;
+    margin-left: auto;
+
+    @include mq(md) {
+        max-width: $inner + strip-unit($padding-pc) * 2;
+        padding-right: $padding-pc;
+        padding-left: $padding-pc;
+    }
+}
+
+.blog__header {
+    @include mq(md) {
+        position: relative;
+    }
+}
+
+.blog__header-title {
+    @include mq(md) {
+        position: absolute;
+        bottom: rem(4);
+        right: 0;
+    }
+}
+
+
+.blog__header-subtitle {
+    @include mq(md) {
+    }
+}
+
+.blog__items {
+    margin-top: rem(71);
+    @include mq(md) {
+        margin-top: rem(44);
+    }
+}
+
+
+.blog__btn {
+    max-width: rem(335);
+    margin: rem(24) auto 0;
+
+    @include mq(md) {
+        max-width: rem(360);
+        margin: rem(44) auto 0;
+
+        position: relative;
+        overflow: hidden;
+    }
+}

@@ -1,0 +1,119 @@
+@use "global" as *;
+
+.content {
+    position: relative;
+
+    @include mq(md){
+    }
+}
+
+.content::before {
+    content: "";
+    width: 100%;
+    height: rem(680);
+    position: absolute;
+    top: rem(-30);
+    left: 0;
+    z-index: -1;
+    background-image: linear-gradient(to right top, transparent 49.9%, $light-yellow 50%, $light-yellow calc(50.1% + 1px), transparent calc(50.2% + 1px));
+
+    @include mq (md) {
+        width: 94.6875%;
+        height: rem(1212);
+        top: rem(-109);
+    }
+}
+
+
+.content__header {
+    @include mq (md) {
+        max-width: rem(1100);
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+.content__items {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: rem(55);
+
+    @include mq(md) {
+        margin-top: rem(52);
+    }
+}
+
+.content__item {
+    position: relative;
+
+    //sp
+    width: 50%;
+    @include mq(md) {
+        width: 25%;
+
+    }
+}
+
+.content__item::before {
+    @include mq (md) {
+        position: absolute;
+        content: "";
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: $white;
+        opacity: 0;
+        z-index: 10;
+        transition: .3s ease;
+    }
+}
+
+.content__item:hover:before {
+    @include mq (md) {
+        opacity: 0.6;
+        transition: .3s ease;
+    }
+}
+
+
+.content__img {
+    position: relative;
+}
+
+.content__img::before {
+    content: "";
+    display: block;
+    padding-top: 89.361702%;
+
+    @include mq (md) {
+        padding-top: 100%;
+    }
+}
+
+.content__img img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.content__imgtitle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+
+    //sp
+    font-size: rem(20);
+    line-height: rem(29);
+    letter-spacing: rem(2);
+
+    @include mq(md){
+        font-size: rem(25);
+    }
+}

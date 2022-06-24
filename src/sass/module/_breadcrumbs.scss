@@ -1,0 +1,30 @@
+@use "global" as *;
+
+.breadcrumbs {
+}
+
+.breadcrumbs__list {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    font-size: rem(16);
+    font-weight: $normal;
+    line-height: rem(19);
+    letter-spacing: rem(1);
+
+    @include mq (md) {
+        letter-spacing: rem(2);
+    }
+}
+
+.breadcrumbs__item {
+}
+
+.breadcrumbs__item:not(:first-child) {
+    margin-left: rem(2);
+}
+
+.breadcrumbs__link {
+    display: block;
+    height: inherit;
+
+}

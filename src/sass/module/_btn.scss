@@ -1,0 +1,93 @@
+@use "global" as *;
+
+
+.btn {
+    display: inline-block;
+    width: 100%;
+    padding: rem(9) 0;
+    text-align: center;
+    border: 1px solid $white;
+	color: $white;
+
+    font-size: rem(20);
+    letter-spacing: rem(2);
+    background: $mid-gray;
+    z-index: 1;
+
+
+    @include mq(md) {
+        position: relative;
+        overflow: hidden;
+		padding: rem(17) 0;
+        font-size: rem(16);
+        // color: $white;
+        // z-index: 10;
+    }
+}
+
+.btn:hover {
+
+    @include mq(md) {
+        color: $mid-gray;
+        // z-index: 10;
+    }
+}
+
+.btn::before {
+    @include mq(md){
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: $white;
+        transform: translateX(-100%);
+        transition: .3s ease;
+        z-index: -1;
+    }
+}
+
+.btn:hover::before {
+
+    @include mq(md){
+        transform: translateX(0);
+        transition: .3s ease;
+        // z-index: 1;
+    }
+}
+
+.btn--news {
+	display: inline-block;
+    width: 100%;
+    padding: rem(9) 0;
+    text-align: center;
+    border: 1px solid $white;
+    font-size: rem(20);
+    letter-spacing: rem(2);
+    color: $white;
+    background: $mid-gray;
+    transition: .3s ease;
+    z-index: 1;
+
+    @include mq(md){
+        // max-width: rem(134);
+        padding: rem(3) rem(25);
+        font-size: rem(16);
+        letter-spacing: normal;
+        color: $mid-gray;
+        background: $white;
+        
+
+    }
+}
+
+.btn--news:hover {
+    @include mq(md){
+        color: $white;
+        background: $mid-gray;
+        border: 1px solid $mid-gray;
+        transition: .3s ease;
+    }
+}
+

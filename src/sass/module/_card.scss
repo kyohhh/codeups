@@ -1,0 +1,120 @@
+@use "global" as *;
+
+.card {
+    display: inline-block;
+    position: relative;
+    background: $white;
+    color: $gray;
+    transition: .3s ease;
+
+    @include mq(md) {
+        max-width: calc(33.3333% - rem(25) * 2 / 3);
+        width: 100%;
+    }
+}
+
+.card:hover {
+    @include mq (md) {
+        background: $mid-gray;
+        color: $white;
+        transition: .3s ease;
+    }
+}
+
+.card__img {
+    padding-top: 66.567164%; // 223 / 335
+    position: relative;
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        object-fit: cover; //トリミング
+    }
+}
+
+.card__new-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: rem(60);
+    height: rem(60);
+    position: absolute;
+    top: rem(-16);
+    left: rem(-16);
+    background: $orange;
+    border-radius: 50%;/*角丸*/
+    z-index: 10;
+    line-height: 60px;
+    color: $mid-gray;
+    font-size: rem(16);
+    font-weight: $normal;
+    letter-spacing: rem(2);
+    text-transform: capitalize;
+
+    @include mq(md) {
+        top: rem(-20);
+        left: rem(-14);
+    }
+}
+
+.card__content {
+    letter-spacing: rem(1);
+    padding: rem(4) rem(23) rem(16);
+    @include mq (md) {
+        padding: rem(4) rem(23) rem(17);
+    }
+}
+
+.card__title {
+    font-size: rem(18);
+    font-weight: $medium;
+    line-height: rem(35);
+
+}
+
+.card__text {
+    font-size: rem(14);
+    font-weight: $normal;
+    line-height: rem(26);
+    margin-top: rem(2);
+
+    @include mq (md) {
+        margin-top: rem(6);
+    }
+}
+
+.card__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 1;
+    margin-top: auto;
+
+    font-size: rem(14);
+    font-weight: $normal;
+    line-height: rem(26);
+    margin-top: rem(7);
+
+    @include mq (md) {
+        margin-top: rem(8);
+    }
+
+}
+
+.card__category {
+    background: $yellow;
+    color: $gray;
+    padding: 0 rem(3);
+    letter-spacing: rem(1);
+    @include mq (md) {
+        padding: 0 rem(6);
+    }
+}
+
+.card__date {
+    letter-spacing: rem(1);
+}

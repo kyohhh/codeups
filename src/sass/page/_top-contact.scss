@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.top-contact {
+    margin: rem(119) 0 0;
+
+    @include mq(md) {
+        margin: rem(150) 0 0;
+    }
+}

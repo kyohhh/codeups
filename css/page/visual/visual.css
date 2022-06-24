@@ -1,0 +1,62 @@
+.u-desktop {
+  display: none;
+}
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  .u-desktop {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-mobile {
+    display: none;
+  }
+}
+
+.visual__content {
+  position: relative;
+}
+
+.visual__text {
+  letter-spacing: 0.5px;
+  letter-spacing: 0.03125rem;
+  font-weight: 700;
+  z-index: 10;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+.visual__title {
+  font-size: 28px;
+  font-size: 1.75rem;
+  line-height: 28px;
+  line-height: 1.75rem;
+}
+@media screen and (min-width: 768px) {
+  .visual__title {
+    font-size: 3.125rem;
+    line-height: 3.125rem;
+    font-weight: bold;
+  }
+}
+
+.visual__subtitle {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 20px;
+  line-height: 1.25rem;
+  margin-top: 24px;
+  margin-top: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .visual__subtitle {
+    font-size: 1.5625rem;
+    line-height: 1.5625rem;
+    font-weight: bold;
+  }
+}
+/*# sourceMappingURL=visual.css.map */

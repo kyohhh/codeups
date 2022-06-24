@@ -1,0 +1,8 @@
+@use "global" as *;
+
+body {
+    font-family: $base-font-family;
+    font-weight: $normal;
+    color: $white;
+    background: $black;
+  }

@@ -1,0 +1,51 @@
+@use "global" as *;
+
+//////////////
+//トップページ
+//////////////
+
+
+.main-visual {
+    position: relative;
+    // height: 100vh;    //保留
+    @include mq(md) {
+        height: 100%;
+    }
+}
+
+.main-visual__text {
+    letter-spacing: rem(0.5);
+    font-weight: $bold;
+    z-index: 10;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    @include mq(md) {
+    }
+}
+
+.main-visual__title {
+    font-size: rem(28);
+    line-height: rem(28);
+
+    @include mq(md) {
+        font-size: rem(50);
+        line-height: rem(50);
+        font-weight: bold;
+    }
+}
+
+.main-visual__subtitle {
+    font-size: rem(20);
+    line-height: rem(20);
+    margin-top: rem(24);
+
+    @include mq(md) {
+        font-size: rem(25);
+        line-height: rem(25);
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,44 @@
+.u-desktop {
+  display: none;
+}
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  .u-desktop {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-mobile {
+    display: none;
+  }
+}
+
+.breadcrumb__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 19px;
+  line-height: 1.1875rem;
+  letter-spacing: 1px;
+  letter-spacing: 0.0625rem;
+}
+@media screen and (min-width: 768px) {
+  .breadcrumb__list {
+    letter-spacing: 0.125rem;
+  }
+}
+
+.breadcrumb__item:not(:first-child) {
+  margin-left: 2px;
+  margin-left: 0.125rem;
+}
+
+.breadcrumb__link {
+  display: block;
+  height: inherit;
+}
+/*# sourceMappingURL=breadcrumbs.css.map */
